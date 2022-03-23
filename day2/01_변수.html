@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    console.log(name1);
+    // 선언은 호이스팅된다.
+    var name1;
+    name1 = '김종현';
+
+    // console.log(name2);
+    // 호이스팅 된다. 하지만 TDZ(Temporal Dead Zone) 할당 하기 전에 사용할 수 없는 구간
+    // TDZ 영역에 있는 것은 사용할 수 없다.
+    let name2;
+    name2 = '김종현';
+
+    console.log(name3);
+    // const는 선언과 동시에 할당 해줘야 함.
+    // const name3;
+    const name3 = '김종현';
+  </script>
+</head>
+<body>
+  <pre>
+    호이스팅 : 
+    스코프 내부에서 변수 선언은 최상위에 선언된 것처럼 사용한다.
+    {} - 최상단으로 끌어 올려진 같은 현상
+
+    변수 선언
+    1. 선언 : 변수 등록 ( 변수는 스코프가 참조하는 대상 ) 
+    2. 초기화 : 변수 공간의 메모리 할당 ( undefined )
+    3. 할당 : 값을 할당
+
+    var
+    1. 선언 및 초기화
+    2. 할당
+
+    let
+    1. 선언
+    2. 초기화
+    3. 할당
+
+    const
+    선언 + 초기화 + 할당
+
+    var : 함수 스코프
+    let, const : 함수스코프, 블록스코프 == {}
+    function() {}
+    if{} for{}...
+  </pre>
+</body>
+</html>

@@ -7,7 +7,6 @@
     let 그릇2 = 밥;
     const 그릇3 = 국;
  */
-
 console.log('test');
 
 // 변수 선언
@@ -19,3 +18,7 @@ console.log(num);
 // 변수 선언과 동시에 할당(초기화)
 let num1 = 200;
 console.log(num1);
+
+const test1 = 3500;
+console.log(test1);
+
