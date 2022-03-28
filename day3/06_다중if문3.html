@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+    let id = 'grape420';
+    let pw = '1234';
+    let userId = '';
+    let userPw = '';
+    let flag = false;
+    
+    while (true) {
+      if(flag == false) userId = prompt('아이디를 입력하세요');
+      if(id === userId || flag == true) {
+       userPw = prompt('비밀번호를 입력하세요');
+        if (pw === userPw) {
+          alert('로그인 성공');
+          break;
+        } else {
+          alert('비밀번호를 다시 입력하세요');
+          flag = true;
+        }
+    } else {
+      alert('아이디를 다시 입력하세요');
+    }
+    }
+    
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
