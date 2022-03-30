@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+    let id = 'grape420';
+    let userId = '';
+    let level = '';
+    let flag = false;
+    
+    while (true) {
+      if (flag === false ) userId = prompt('아이디를 입력하세요');
+      if(id === userId || flag === true) {
+       level = prompt('레벨을 입력하세요');
+        if (level >= 5 && level <= 10) {
+          alert(level + '레벨은 해당컨텐츠를 사용할 수 있습니다.');
+          break;
+        } else {
+          alert(level + '레벨은 해당컨텐츠를 사용할 수 없습니다.');
+          flag === true;
+        }
+    } else {
+      alert('아이디를 다시 입력하세요');
+    }
+    }
+    
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

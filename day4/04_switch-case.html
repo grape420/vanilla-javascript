@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+    let num = Number(prompt('시간을 24시간으로 입력하세요.'));
+
+    switch (true) {
+      case num < 11:
+        alert('아침 먹을 시간');
+        break;
+      case num < 15 && num >= 11:
+        alert('점심 먹을 시간');
+        break;
+      default:
+        alert('저녁 먹을 시간');
+    }
+    
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+    let day = Number(prompt('숫자를 입력하세요 : '));
+    let dayName = '', msg = '';
+
+    if (day >= 0 && day <=6) {
+    switch (day) {
+      case 0: dayName = '일요일'; break;
+      case 1: dayName = '월요일'; break;
+      case 2: dayName = '화요일'; break;
+      case 3: dayName = '수요일'; break;
+      case 4: dayName = '목요일'; break;
+      case 5: dayName = '금요일'; break;
+      case 6: dayName = '토요일'; break;
+    
+      default: dayName = '요일 없음';
+    }
+  } else {
+    document.write('숫자 다시 입력');
+  }
+    msg = '입력한 ' + day + '번은' + dayName + '입니다.';
+    document.write(msg); 
+    
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

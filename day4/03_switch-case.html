@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+    let device = prompt('기종을 입력하세요 : ');
+    switch (device) {
+      case 'iphone':
+        document.write('아이폰');
+        break;
+      case 'ipad':
+        document.write('아이패드');
+        break;
+      case 'galaxy':
+        document.write('갤럭시');
+        break;
+      default:
+        document.write('기종없음');
+    }
+    
+  </script>
+</head>
+<body>
+  <pre>
+    switch문은 같은 것만 비교할 때 사용 (개발단에서 많이 사용) 
+    처리 속도가 빠르다 (분기형)
+  </pre>
+</body>
+</html>
