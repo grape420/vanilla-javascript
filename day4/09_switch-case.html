@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+    let num1 = Number(prompt('첫 번째 정수 입력 : '));
+    let op = prompt('사칙연산 중에 하나를 입력하세요 : ');
+    let num2 = Number(prompt('두 번째 정수 입력 : '));
+
+    let result = 0;
+
+    switch (op) {
+      case '+': document.write(num1 + op + num2 + '=' + (num1 + num2)); break;
+      case '-': document.write(num1 + op + num2 + '=' + (num1 - num2)); break;
+      case '*': document.write(num1 + op + num2 + '=' + (num1 * num2)); break;
+      case '/': document.write(num1 + op + num2 + '=' + (num1 / num2)); break;
+      default: document.write('잘못 입력하셨습니다.');
+    }
+    
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
