@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let id = 'grape420'
+    let pw = '1234';
+    let cnt = 1;
+
+    
+
+    while (true) {
+      let userId = prompt('아이디를 입력하세요');
+      let userPw = prompt('비밀번호를 입력하세요');
+
+      if (id == userId && pw == userPw) {
+        alert('로그인 성공');
+        break;
+      } else if (cnt < 5) {
+        alert('로그인 ' + cnt + '회 실패 \n' + (5 - cnt) + '회 남음');
+        cnt++;
+      } else if (cnt >= 5) {
+        alert('은행에 문의하세요.');
+        break;
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <pre>
+    id = 'grape420', pw = '1234'
+    userid / userpw
+    오류횟수 : count
+
+    1. while 무한 반복 while(true) 
+    2. userid / userpw 받기
+    3. 일치하면 로그인 성공 / 중단 break
+    4. 그렇지 않으면 로그인 1회 실패 \n 4회 남음
+    5. 5회 초과 시 은행에 문의하세요. 중단
+  </pre>
+</body>
+</html>
