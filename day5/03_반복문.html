@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    select { width: 200px; height: 50px; border: 1px solid black; padding: 15px}
+  </style>
+  <script>
+    'use strict';
+
+    let m = '<select>';
+    for (let i = 1; i <= 12; i++) {
+      m += '<option>' + i + '월</option>';
+    }
+    m += '</select>';
+    
+    document.write(m);
+
+    let day = '<select>';
+    for (let i = 1; i <= 31; i++) {
+      day += '<option>' + i + '일</option>';
+    }
+    day += '</select>';
+
+    document.write(day);
+
+    let year  = '<select>';
+    for (let i = 2022; i >= 1900; i--) {
+      year += '<option>' + i + '년</option>';
+    }
+    year += '</select>';
+
+    document.write(year);
+  </script>
+</head>
+<body>
+
+  <pre>
+    1월 ~ 12월 까지 출력 - select ~ option
+    1. day 1일 ~ 31일 : select ~ option
+    2. year : 2022년 ~ 1900년
+  </pre>
+</body>
+</html>

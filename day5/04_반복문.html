@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0}
+    ul {margin : 15px}
+    ul li {
+      width : 200px; height : 35px; line-height :35px; border : 1px solid black; text-indent : 15px; margin-bottom :5px; list-style : none;
+    }
+  </style>
+  <script>
+    'use strict';
+
+    let dan = Number(prompt('숫자를 입력하세요.'));
+    let output = '';
+
+    output = '<ul>';
+    for (let i = 1; i <= 9; i++) {
+      output += '<li>' + dan + ' * ' + i + ' = ' + (dan * i) + '</li>';
+    }
+    output += '</ul>';
+    document.write(output);
+  </script>
+</head>
+<body>
+
+  <pre>
+   
+  </pre>
+</body>
+</html>
