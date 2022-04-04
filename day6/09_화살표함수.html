@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // make();   // 화살표 함수는 이거 실행 안됨
+    const make = () => {
+      alert('안녕하세요');
+    }
+    // make();
+
+    const make1 = (num) => {
+      alert(`${num}`);
+    }
+    // make1(100);
+
+    const make2 = (x, y) => {
+      alert(`${x + y}값`);
+    }
+    // make2(100, 100);
+
+    const make3 = (x, y) => {
+      return x + y;
+    }
+
+    const z = make3(100, 100);
+    document.write(z);
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
