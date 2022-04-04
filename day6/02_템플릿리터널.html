@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let name = '김종현';
+    let age = 27;
+    let addr = '서울';
+    let tel = '010-1234-5678';
+    let msg = '이름은 ' + name + '이고 나이는 ' + age + '살 이며 집 주소는 ' + addr + '이고 연락처는 ' + tel + '입니다.';
+    
+    document.write(msg, '<br>');
+    document.write('=============================<br>');  
+
+  </script>
+</head>
+<body>
+  <pre>
+    템플릿 리터널
+    `
+    1. 멀티라인 개행이 자유롭다.
+    2. 보간법 사용한다. (유동적인 값을 넣을 수 있다.)
+       ${ 수식 }
+       ${ 변수 }
+    3. 작은따옴표, 이중따옴표의 표현이 자유롭다.
+    4. HTML 취약점을 안전하게 사용하도록 보안문제가 가능하다. 
+  </pre>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    function make(name, age) {
+      document.write(`<h3>이름은 ${name}이고 나이는${age}살 입니다.</h3>`);
+    }
+
+    make('홍길동', 12);
+    make('유관순', 13);
+    make('안중근', 14);
+    make('김종현', 15);
+
+    function fx(num) {
+      let x = num + 10;
+      document.write(`x : ${x}<br>`); 
+    }
+    fx(100);
+    fx(200);
+    document.write(`==============<br>`);
+
+    function sum(a, b) {
+      document.write(`두 수의 합 : ${a + b}<br>`);
+    }
+    
+    sum(10, 30);
+
+    document.write(`===============<br>`);
+
+    function sub(a, b, c) {
+      document.write(`세 수의 차는 ${a - b - c}<br>`);
+    }
+    sub(50, 30, 10);
+    
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
