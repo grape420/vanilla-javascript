@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    function count(num) {
+      document.write(`num : ${num} <br>`);
+      num--;
+      if (num == 0) {
+        return false;
+      }
+      count(num);
+    }
+    
+    count(10);
+  </script>
+</head>
+<body>
+  <pre>
+    재귀함수 : 함수 내에서 자신의 함수를 호출하는 함수
+    ex) 팩토리얼
+  </pre>
+</body>
+</html>

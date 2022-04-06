@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    function fun1(x){
+
+      return function() {
+        return x;
+      }
+    }
+
+    const fun2 = fun1(10);
+    console.log(fun2());
+    // 함수호출
+    document.write(fun2(), '<br>');
+    // 함수의 리턴값
+    document.write(fun2, '<br>');
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

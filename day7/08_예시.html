@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 400px; height:80px; border: 1px solid #000;
+      font-size:40px; line-height:2; text-indent: 20px;
+    }
+    button {
+      width:120px;
+      height:40px;
+    }
+  </style>
+ 
+</head>
+<body>
+  <div class="box">??</div>
+  <p>
+    <button class="stop">중지</button>
+    <button class="start">시작</button>
+  </p>
+
+
+
+  <script>
+    'use strict';
+    let count = 0, timerId = null, interval = 1000;
+    let start = document.querySelector('.start');
+    let stop = document.querySelector('.stop');
+    let box = document.querySelector('.box');
+
+    box.innerHTML = count;
+
+    
+    const make = () => {
+      count++;
+      // 10이 넘으면 0으로 초기화
+      // if (count > 10) count = 0;
+      count = count % 11;
+      box.innerHTML = count;
+    }
+    
+    timerId = setInterval(make, interval);
+
+    stop.addEventListener('click', () => {
+      clearInterval(timerId);
+    });
+
+    start.addEventListener('click', () => {
+      timerId = setInterval(make, interval);
+    })
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // function make(callback) {
+    //   for (let i = 0; i < 10; i++) {
+    //     callback();
+    //   }
+    // }
+
+
+    //   make(function() {
+    //     document.write('함수호출<br>');
+    //   })
+
+    const make = (callback) => {
+      for (let i = 0; i < 10; i++) {
+        callback();
+      }
+    }
+
+      make(() => {
+        document.write('함수호출<br>');
+      })
+
+      
+    
+  </script>
+</head>
+<body>
+  <pre>
+    callback 함수
+    매개변수로 함수를 전달받아서 내부에서 실행하는 함수
+  </pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // function sum(min, max) {
+    //   let hap = 0;
+
+    //   for (let i = min; i <= max; i++) {
+    //     hap = hap + i;
+    //   }
+    //   return hap;
+    // }
+
+    const sum = (min, max)  => {
+      let hap = 0;
+
+      for (let i = min; i <= max; i++) {
+        hap += i;
+      }
+      return hap;
+    }
+
+    const result = sum(10, 20);
+    document.write('결과 : ' + result);
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

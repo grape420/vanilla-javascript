@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // function add(a, b) {
+    //   return a + b;
+    // }
+
+    // function addResult( callback ) {
+    //   document.write('두 수의 합 : ' + callback);
+    // }
+    
+    // addResult(add(10, 20));
+
+    const add = (a, b) => {
+      return a + b;
+    }
+
+    const addResult = ( callback ) => {
+      document.write('두 수의 합 : ' + callback);
+    }
+    
+    addResult(add(10, 20));
+    
+    
+  </script>
+</head>
+<body>
+  <pre>
+    callback 함수
+    매개변수로 함수를 전달받아서 내부에서 실행하는 함수
+  </pre>
+</body>
+</html>
