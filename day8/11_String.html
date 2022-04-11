@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    user = prompt('주민번호 앞자리 6자리를 입력하세요');
+
+    let year = user.slice(0, 2);
+    let month = user.slice(2, 4);
+    let day = user.slice(4,6);
+    document.write(`당신의 생일은 ${year}년 ${month}월 ${day}일 입니다.`);
+  </script>
+</head>
+<body>
+  <pre>
+    user : 주민번호 앞자리 6자리
+    당신의 생일은 96년 04월 20일 입니다.
+  </pre>
+</body>
+</html>
