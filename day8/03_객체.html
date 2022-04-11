@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    const car = {
+      name : '테슬라',
+      color : 'red',
+      price : 5000,
+      start : function(x) {
+        if (x == 'on') {
+          alert(`${this.name} 시동이 켜졌습니다.`);
+        } else {
+          alert(`${this.name} 시동이 꺼졌습니다.`);
+        }
+      }
+    }
+
+    document.write(`${car.name}<br>`);
+
+    car.start('on');
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

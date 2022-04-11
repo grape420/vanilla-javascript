@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let user = prompt('주민번호 뒷자리를 입력하세요');
+    let ch = user.charAt(0);
+
+    if (ch == '1' || ch == '3') {
+      document.write('남자');
+    } else if (ch == '2' || ch == '4') {
+      document.write('여자');
+    } else if (ch == '' || isNaN(ch)) {
+      document.write('형식이 잘못되었습니다.');
+    } else {
+      document.write('범위 초과');
+    }
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

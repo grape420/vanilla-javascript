@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let cat = {
+      name : '페르시안',
+      age : 2,
+      color : '흰색',
+      food : '사료',
+      eat : function() {
+        // this : 객체 자기 자신
+        document.write(`${this.name}은 ${this.food}를 좋아합니다. <br>`);
+      }, 
+      sleep : function() {
+        document.write('잠자다<br>');
+      },
+      run : function() {
+        document.write('달리다<br>');
+      }
+    }
+
+    cat.eat();
+    cat.sleep();
+    cat.run();
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

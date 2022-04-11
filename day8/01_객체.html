@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let product = {
+      "제품명" : "아메리카노",
+      "유형" : "커피",
+      "성분" : "원두",
+      "원산지" : "한국"
+    }
+
+    document.write(product, '<br>');
+    document.write(product.제품명, '<br>');
+    document.write(product.유형, '<br>');
+    document.write(product.성분, '<br>');
+    document.write(product.원산지, '<br>');
+
+    document.write('================================================================<br>');
+
+    document.write(product['제품명'], '<br>');
+    document.write(product['유형'], '<br>');
+    document.write(product['성분'], '<br>');
+    document.write(product['원산지'], '<br>');
+
+    document.write('================================================================<br>');
+
+    for (let i in product) {
+      document.write(i + ' : ' + product[i] + '<br>');
+    }
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

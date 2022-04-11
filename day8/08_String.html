@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    const make = (num, size) => {
+      let result = '';
+      num = num.toString();
+      let len = num.length;
+
+      if (let < size) {
+        for (let i = 0; i < size - len; i++) {
+          result += '0';
+        }
+        return result + num;
+      }
+    
+      
+    }
+
+    document.write(make('10', 5), '<br>');
+    document.write(make('22', 5), '<br>');
+    document.write(make('200', 5), '<br>');
+  </script>
+</head>
+<body>
+  <pre>
+    제품코드 10 => 00010
+    제품코드 22 => 00022
+    제품코드 200 => 00200
+  </pre>
+</body>
+</html>
