@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let str = '안녕하세요 김종현입니다. 오늘은 수요일입니다.';
+
+    let a = str.search('김');
+    let b = str.search('오늘은');
+    let c = str.includes('수요일');       // includes : true / false로 반환
+    let d = str.includes('녕');
+
+    document.write(a + '<br>');
+    document.write(b + '<br>');
+    document.write(c + '<br>');
+    document.write(d + '<br>');
+
+    if (str.includes('김종현')) {
+      document.write('해당 문자를 검색함');
+    } else {
+      document.write('해당 문자를 찾을 수 없음');
+    }
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
