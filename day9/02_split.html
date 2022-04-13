@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let tags = '과자, 사탕, 옥수수, 아이스크림';
+    document.write(`#${tags} <br>`);
+
+    let arr = tags.split(',');
+    console.log(arr);
+   
+    for (let i in arr) {
+      document.write(`${i} : ${arr[i]} <br>`);
+    }
+
+    let day = '2022-04-13';
+    let msg = day.replaceAll('-', ' ');
+    document.write(`${msg}`);
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
