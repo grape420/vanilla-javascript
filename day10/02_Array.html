@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let arrColor = ['red', 'green','blue','pink'];
+        let str1 = arrColor.toString();
+        let str2 = arrColor.join('+ ');
+        let str3 = arrColor.join(' * ');
+        let str4 = arrColor.join(' ');
+
+
+        document.write(`arrColor: ${arrColor}  / 타입 : ${typeof arrColor} <br>`);
+        document.write(`str1: ${str1}  / 타입 : ${typeof str1} <br> `);
+        document.write(`str2: ${str2}  / 타입 : ${typeof str2} <br>`);
+        document.write(`str3: ${str3}  / 타입 : ${typeof str3} <br>`);
+        document.write(`str4: ${str4}  / 타입 : ${typeof str4} <br>`);
+
+        let menuItem  = ['menu1','menu2','menu3','menu4'];
+        // const result  = menuItem.join('-');
+        const result  = menuItem.join('<br>');
+        document.write( result );
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        toString 
+        메서드는 지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다
+
+        join
+        메서드는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.
+    </pre>
+</body>
+</html>

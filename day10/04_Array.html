@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>   
+    <style>
+        #box {
+            padding: 20px;
+            border: 1px solid #000;
+            margin: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+    <script>
+       let color = '레드,그린,pink,lime,skyblue,hotpink';
+       //배열로 변경 
+       let arr = color.split(',');
+       document.querySelector('#box').innerHTML = arr.join('<br>');
+    </script>
+
+    <!-- <script>
+        let arr = [];
+        arr.push('red');
+        arr.push('pink');     
+        arr.push('tomato');     
+        arr.push('hotpink');
+        document.querySelector('#box').innerHTML = arr.join('<br>');
+    </script> -->
+    
+    <!-- <script>
+        'use strict'
+        let msg = '';
+        msg += 'red<br>';
+        msg += 'green<br>';
+        msg += 'pink<br>';
+        msg += 'blue<br>';
+        msg += 'lime<br>';
+        document.querySelector('#box').innerHTML = msg ;
+    </script> -->
+
+    <!-- <script>
+        'use strict'
+        let msg = '';
+        msg += 'red';
+        msg += 'green';
+        msg += 'pink';
+        msg += 'blue';
+        msg += 'lime';
+        document.querySelector('#box').innerHTML = msg ;
+    </script> -->
+</body>
+</html>

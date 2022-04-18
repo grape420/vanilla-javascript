@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        const data =[
+            {name:'김철수', age: 20 , city:'제주'},
+            {name:'이수근', age: 35 , city:'경기'},
+            {name:'김태리', age: 22 , city:'제주'},
+            {name:'남주혁', age: 25 , city:'서울'},
+            {name:'최우식', age: 28, city:'울산'},
+        ]
+
+        const data1  = [];
+        //for , if   city가 제주인 사람담기  push 
+        for( let i = 0 ; i < data.length ; i++ ){
+            if( data[i].city == '제주' ) {
+                data1.push( data[i] );
+            }
+        }
+        //for~of
+        for( let item of data1 ) {
+            document.write( item.name , item.age , item.city ,'<br>');
+        }
+        document.write( '==================<br>');
+
+        const data2 = data.filter( item => item.city == '제주' );
+        for( let item of data2 ) {
+            document.write( item.name , item.age , item.city ,'<br>');
+        }
+        document.write( '==================<br>');
+
+        //나이가 20이상인 사람만 출력 
+        const data3  = data.filter( item => item.age >= 20 );
+        for( let item of data3 ) {
+            document.write( item.name , item.age , item.city ,'<br>');
+        }
+        document.write( '==================<br>');
+
+        //이수근 삭제하고 나머지만 출력 
+        const data4 = data.filter( item => item.name != '이수근');
+        for( let item of data4 ) {
+            document.write( item.name , item.age , item.city ,'<br>');
+        }
+        document.write( '==================<br>');
+        
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+</body>
+</html>

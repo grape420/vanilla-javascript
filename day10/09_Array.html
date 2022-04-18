@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const arr = [ 10,15,22,30,31,50,55 ];
+
+        const result1 = arr.filter( function( element , index , arr ) {
+            // document.write( element,'/',index,'/',arr,'<br>');
+            if( element % 2 == 0 ) {
+                //result1 값을 저장 
+                return true;
+            }else{
+                //값을 버린다 
+                return false ;
+            }
+        })
+        document.write( result1 , '<br>');
+        document.write( '////////////<br>');
+
+
+        const result2_1 = arr.filter( function( item ){
+            return item % 3 == 0;
+        })
+
+        const result2 = arr.filter( item => item % 3 == 0 );
+
+        document.write( result2 , '<br>');
+        document.write( '////////////<br>');
+
+        //30보다 큰값을 출력 - 화살표함수 
+        const result3_1 = arr.filter( item => {
+            return item > 30;
+        } )
+        const result3 = arr.filter( item => item > 30 );
+        document.write( result3 , '<br>');
+        document.write( '////////////<br>');
+
+        //30을 제외한 값을 출력 ( 데이터 삭제 )
+        const result4_1 = arr.filter( item => {
+            return item != 30
+        })
+        const result4 = arr.filter( item => item != 30 );
+        document.write( result4 , '<br>');
+        document.write( '////////////<br>');
+
+
+        const arr1 =['최우식','김다미','김태리','남주혁','송혜교','유재석'];
+        const txt ='김';
+
+        //filter  indexOf 이용해서 김이 들어가있는 값을 출력 
+        const result5 = arr1.filter( item => item.indexOf(txt) != -1 )
+        document.write( result5 , '<br>');
+        document.write( '////////////<br>');
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        Array.prototype.filter()
+        Try it
+        filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+
+        구문
+        arr.filter(callback(element[, index[, array]])[, thisArg])
+        arr.filter(function( 현재값 , 인덱스 , 배열 ){
+            return 조건식 
+        })
+
+        매개변수
+
+        callback
+        각 요소를 시험할 함수. true를 반환하면 요소를 유지하고, false를 반환하면 버립니다. 다음 세 가지 매개변수를 받습니다.
+
+        element
+        처리할 현재 요소.
+
+        index Optional
+        처리할 현재 요소의 인덱스.
+
+        array Optional
+        filter를 호출한 배열.
+
+        thisArg Optional
+        callback을 실행할 때 this로 사용하는 값.
+       
+        반환 값
+        테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환합니다.
+
+
+    </pre>
+</body>
+</html>
