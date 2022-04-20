@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ 
+</head>
+<body>
+  <h1 id="box1">제목태그</h1>
+  <h1 id="box2">제목태그</h1>
+  <h1 id="box3">제목태그</h1>
+
+  <script>
+    'use strict';
+
+    const box1 = document.getElementById('box1');
+    const box2 = document.getElementById('box2');
+    const box3 = document.getElementById('box3');
+    // xxx.style.css = '값'
+    box1.innerHTML = '나는 제목입니다.';
+    box1.style.color = 'red';
+    box1.style.fontSize = '50px';
+
+    box1.innerHTML = '나는 아이디1';
+    box2.innerHTML = '나는 아이디2';
+    box3.innerHTML = '나는 아이디3';
+
+    box2.style.color = 'tomato';
+    box2.style.fontSize = '40px';
+    box2.style.width = '400px';
+    box2.style.backgroundColor = 'yellow';
+    box2.style.textIndent = '20px';
+    box2.style.border = '1px solid black';
+    box2.style.marginBottom = '20px';
+
+  </script>
+</body>
+</html>
