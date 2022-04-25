@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    
+</head>
+<body>
+  <ul>
+    <li><a href="http://www.naver.com" title="네이버">네이버</a></li>
+    <li><a href="http://www.nate.com" title="네이트">네이트</a></li>
+    <li><a href="http://www.daum.net" title="다음">다음</a></li>
+  </ul>
+
+  <div>
+    <p>xxx</p>
+    <p>xxx</p>
+    <p>xxx</p>
+  </div>
+
+  <h2 class="text">제목</h2>
+  <h2 class="text">제목</h2>
+  <h2 class="text">제목</h2>
+  <h2 class="text">제목</h2>
+
+  <h1 id="text">제목1</h1>
+  <h2 class="title">제목</h2>
+  <h2 class="title">제목</h2>
+  <h2 class="title">제목</h2>
+  <h3>제목3</h3>
+  <hr>
+
+  <div class="box">
+    <h2>제목2</h2>
+    <ul>
+      <li>list1</li>
+      <li>list2</li>
+      <li>list3</li>
+      <li>list4</li>
+      <li>list5</li>
+    </ul>
+  </div>
+
+  <script>
+    let link = document.getElementsByTagName('a');
+    let p = document.getElementsByTagName('p');
+
+    for (let i in link) {
+      p[i].innerHTML = link[i].href;
+      p[i].innerHTML = link[i].title;
+      p[i].innerHTML = link[i].innerHTML;
+      p[i].innerHTML = link[i].innerText;
+    }
+
+    let dom = document.getElementsByClassName('text');
+    
+    dom[0].style.backgroundColor = 'yellow';
+    dom[1].style.backgroundColor = 'red';
+    dom[2].style.backgroundColor = 'green';
+    dom[3].style.backgroundColor = 'blue';
+
+    for(let i in dom) {
+      dom[i].innerHTML = '.text의 영역의[' + i + ']번째 배열형식';
+      dom[i].style.padding = '10px';
+    }
+
+
+    let h1 = document.querySelector('#text');
+    let h2 = document.querySelector('.title');
+    let h3 = document.querySelector('h3');
+
+    h1.style.color = 'red';
+    h2.style.color = 'green';
+    h3.style.color = 'hotpink';
+
+    let box = document.querySelector('.box');
+    let ul = document.querySelector('.box ul');
+    let li = document.querySelector('.box ul li');
+
+    box.style.margin = '20px';
+    box.style.border = '2px solid #000';
+    box.style.padding = '10px';
+    
+  </script>
+
+  <pre>
+    querySelector('선택자') : 하나의 대상
+    querySelector('#아이디') 
+    querySelector('#아이디 > 자식요소')
+    querySelector('#아이디 자식요소')
+    querySelector('.클래스')
+
+    querySelectorAll('선택자') : 여러개일 경우
+    querySelectorAll('ul li')
+    querySelectorAll('li')
+    querySelectorAll('.class')
+    querySelectorAll('.box li')
+    querySelectorAll('#box li')
+
+  </pre>
+</body>
+</html>

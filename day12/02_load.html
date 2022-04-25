@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    <script>
+      // const btn1 = document.querySelector('#btn1');
+      // btn1.innerHTML = '클릭버튼';
+      // document.querySelector('#btn1')가 html 내부의 id가 btn1이란 태그가 생성되기도전에 실행되는 것이 문제가 된다.
+
+      /*
+        load 이벤트는 리소스와 그것에 의존하는 리소스들의 로딩이 완료되면 실행됩니다.
+      */
+
+      window.onload = function() {
+        const btn2 = document.querySelector('#btn2');
+        const pic = document.querySelector('.pic');
+        btn2.innerHTML = '<span>나는 제목</span> 입니다.';
+        btn2.innerHTML = pic.getAttribute('width');
+      }
+
+      // addEventListener('이벤트', function(){}) 
+      window.addEventListener('load', function() {
+        // window.onload와 같다
+        const btn3 = document.querySelector('#btn3');
+        const pic = document.querySelector('.pic');
+        btn3.textContent = "버튼3333";
+        btn3.textContent = pic.getAttribute('src');
+      });
+
+      // DOMContentLoaded는 onload보다 먼저 실행
+      // IE8이하 지원하지 않음
+      // html이 로드되고 DOM 트리가 완성되지만 외부 리소스가 아직 로드되지 않는다.
+      window.addEventListener('DOMContentLoaded', function() {
+        const btn4 = document.querySelector('#btn4');
+        const pic = document.querySelector('.pic');
+        btn4.textContent = "버튼3333";
+        btn4.textContent = pic.getAttribute('class');
+      });
+    </script>
+</head>
+<body>
+  <button id="btn1">test</button>
+  <button id="btn2">test</button>
+  <button id="btn3">test</button>
+  <button id="btn4">test</button>
+  <img src="images/img0.jpg" alt="" width="400" class="pic">
+  
+  <script>
+      
+
+      
+  </script>
+</body>
+</html>

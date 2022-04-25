@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ 
+</head>
+<body>
+
+  <p>태그선택자</p>
+  <ul>
+    <li>list</li>
+    <li>list</li>
+    <li>list</li>
+    <li>list</li>
+    <li>list</li>
+  </ul>
+  <div>
+    <p>나도태그</p>
+  </div>
+  <p>나는문단</p>
+  <script>
+    'use strict';
+
+    let arr = ['사과','오렌지', '수박', '사탕', '과자'];
+    let li = document.getElementsByTagName('li');
+
+    li[0].style.color = 'red';
+    li[1].style.color = 'blue';
+    li[2].style.color = 'pink';
+    li[3].style.color = 'green';
+    li[4].style.color = 'grey';
+
+
+    for(let i in arr) {
+      li[i].innerHTML = arr[i];
+    }
+
+    for (let i = 0; i < li.length; i++) {
+      li[i].style.border = '1px solid black';
+      li[i].style.margin = '20px';
+      li[i].style.width = '50px';
+      li[i].style.height = '30px';
+      li[i].style.lineHeight = '2.5';
+      li[i].style.textAlign = 'center';
+      li[i].style.backgroundColor = 'beige';
+    }
+
+    let p = document.getElementsByTagName('p');
+    p[0].innerHTML = '첫 번째 문단';
+    p[1].innerHTML = '두 번째 문단';
+    p[2].innerHTML = '세 번째 문단';
+  </script>
+</body>
+</html>

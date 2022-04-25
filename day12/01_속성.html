@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    <script>
+      
+    </script>
+</head>
+<body>
+  <div id="text"></div>
+
+  <a href="#" class="link"></a>
+
+  <br>
+
+  <input type="text" >
+  <label for="chk">선택</label>
+  <script>
+      // 1. 아이디명 가져오기
+      let text = document.querySelector('#text');
+      text.innerHTML = '<a href="#">네이버</a>';
+
+      let link = document.querySelector('#text a');
+      link.setAttribute('href', 'http://www.naver.com');
+
+      let link2 = document.querySelector('.link');
+      link2.textContent = '네이버';
+
+      // let attr = ['id', 'href', 'title', 'target'];
+      // let val = ['myLink', 'http://www.naver.com', '네이버로', '_blank'];
+
+
+      // for (let i = 0; i < attr.length; i++) {
+      //   link2.setAttribute(attr[i], val[i]); 
+      // }
+
+      Object.assign(link2, 
+      {
+        id : 'my', 
+        title : '네이버로 이동', 
+        href : 'http://www.naver.com', 
+        target : '_blank'
+      });
+
+      let input = document.querySelector('input');
+      Object.assign(input, {
+        id : 'chk', 
+        name : 'chk', 
+        type : 'checkbox',
+        checked : 'true'
+      })
+      
+      
+      
+
+  </script>
+
+  <pre>
+    let link = document.querySelector('#text a');
+    link.setAttribute('href', 'http://www.naver.com');
+
+    let link2 = document.querySelector('.link');
+    link2.textContent = '네이버';
+    link2.setAttribute('id', 'myLink'); 
+    link2.setAttribute('title', '네이버로 이동합니다.'); 
+    link2.setAttribute('href', 'http://www.naver.com');
+    link2.setAttribute('target', '_blank');
+    ----------------------------------------------------------------
+    let attr = ['id', 'href', 'title', 'target'];
+      let val = ['myLink', 'http://www.naver.com', '네이버로', '_blank'];
+
+
+      for (let i = 0; i < attr.length; i++) {
+        link2.setAttribute(attr[i], val[i]); 
+      }
+  </pre>
+</body>
+</html>

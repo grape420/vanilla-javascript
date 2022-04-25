@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ 
+</head>
+<body>
+  <button id="box" onclick="onColor('안녕하세요')">클릭</button>
+
+  <script>
+    'use strict';
+
+    const onColor = (text) => {
+      let dom = document.getElementById('box');
+      dom.style.color = 'blue';
+      dom.style.padding = '20px 60px';
+      dom.style.border = '2px solid black';
+      dom.style.margin = '10px';
+      dom.style.fontSize = '20px';
+
+      dom.innerHTML = text;
+    }
+
+  </script>
+</body>
+</html>
