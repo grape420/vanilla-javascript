@@ -5,16 +5,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <style>
-
+      .gallery {}
+      .gallery h1 { font-size: 40px;}
+      .gallery img {width: 500px;}
+      .gallery button {padding:5px 15px}
     </style>
     <script>
 
     </script>
 </head>
 <body>
-  
+  <div class="gallery">
+    <h1>xxx</h1>
+    <img src="images/img4.jpg" alt="">
+    <p>
+      <button>이미지1</button>
+      <button>이미지2</button>
+      <button>이미지3</button>
+      <button>이미지4</button>
+    </p>
+  </div>
   <script>
-      
+    const h1 = document.querySelector('h1');
+    const img = document.querySelector('img');
+    const btn = document.querySelectorAll('button');
+
+    const arr = ['고양이0', '제주도사진', '계란', '개'];
+
+    for (let i = 0; i < arr.length; i++) {
+      btn[i].addEventListener('click', function() {
+      h1.innerHTML = arr[i];
+      img.setAttribute('src', 'images/img' + i + '.jpg');
+    })
+    }
+  
   </script>
 </body>
 </html>

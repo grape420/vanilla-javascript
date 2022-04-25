@@ -12,9 +12,18 @@
     </script>
 </head>
 <body>
-  
+  <div>xxx</div>
   <script>
-      
+      const dom = document.querySelector('div');
+      dom.addEventListener('click', function() {
+        this.textContent = '나는박스';
+        this.style.color = 'hotpink';
+        console.log(this);
+      })
+      // dom.addEventListener('click', () => {
+      //   // 화살표 함수 안에서 this는 상위 스코프의 this - window를 가르킨다
+      //   console.log(this);
+      // })
   </script>
 </body>
 </html>
