@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <button onclick="onBtn()">클릭</button>
+  <button id="btn1">클릭</button>
+  <button id="btn2">클릭</button>
+  <button id="btn3">클릭</button>
+  <button id="btn4">클릭</button>
+  <script>
+      // 예전 방법
+      const onBtn = () => {
+        alert('test');
+      }
+
+      // 요즘 방법
+      const btn1 = document.querySelector('#btn1');
+      btn1.onclick = function() {
+        alert('test2');
+      }
+
+      // addEventListener
+      const btn2 = document.querySelector('#btn2');
+      btn2.addEventListener('click', function() {
+        alert('test3');
+      })
+
+      const btn3 = document.querySelector('#btn3');
+      btn3.addEventListener('click', () => {
+        alert('test4');
+      })
+
+      const test = function() {
+        alert('test5');
+      }
+
+      // 함수 선언 후 매개변수에 넣음
+      const btn4 = document.querySelector('#btn4');
+      btn4.addEventListener('click', test)
+  </script>
+</body>
+</html>
