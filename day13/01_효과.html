@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      div {
+        width: 100px; height: 100px; background : hotpink; position: relative;
+      }
+
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+  <div class="box"></div>
+ 
+  <script>
+    let box = document.querySelector('.box');
+    box.addEventListener('click', function(e) {
+      let el = this;
+      let start = parseInt(getComputedStyle(el).left);
+      let end = start + 100;
+
+      function go() {
+        let current = parseInt(getComputedStyle(box).left);
+
+        setTimeout(function() {
+          if (current < end) {
+            box.style.left = current + 1 + 'px';
+            go();
+          }
+        }, 5)
+      }
+      go();
+    })
+  </script>
+</body>
+</html>

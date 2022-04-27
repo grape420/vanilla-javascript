@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      div {
+        width: 100px; height: 100px; background : hotpink; position: relative;
+      }
+
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+  <div class="box"></div>
+ 
+  <script>
+    let box = document.querySelector('.box');
+
+    const newspaperSpinning = [
+      { transform: 'rotate(0) scale(1)'},
+      { transform: 'rotate(360deg) scale(0)'},
+      { transform: 'rotate(0deg) scale(1)'}
+    ];
+
+    const newspaperTiming = {
+      duration:4000,
+      iterations:1
+    }
+
+    box.addEventListener('click', function(e) {
+     this.animate(newspaperSpinning, newspaperTiming);
+    })
+  </script>
+</body>
+</html>
