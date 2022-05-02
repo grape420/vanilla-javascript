@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+    .all-menu{ width: 35px; height: 30px;  margin: 50px; padding: 5px;overflow: hidden; position: relative; cursor: pointer;}    
+    .all-menu span{display: block;  width: 35px; height: 2px;background-color: #333;position: absolute; left: 0;transition: 0.3s;}   
+    .all-menu .line01{ top: 1px; }
+    .all-menu .line02{ top: 13px; }
+    .all-menu .line03{ top: 25px; }
+ 
+    .all-menu.active .line02{ transform: scaleX(0); }
+    .all-menu.active .line01{
+        transform: rotate(45deg);
+        transform-origin: left top; 
+        left: 5px; 
+    }
+    .all-menu.active .line03{
+        transform: rotate(-45deg);
+        transform-origin: left bottom;
+        left: 5px; 
+    }
+    </style>
+</head>
+<body>
+
+ 
+ <div class="all-menu">     
+        <span class="line01"></span>  
+        <span class="line02"></span>
+        <span class="line03"></span>    
+</div>
+
+    <script>
+     /*   let allMenu  = document.querySelector('.all-menu');
+       allMenu.addEventListener('click', function(e){
+           e.currentTarget.classList.toggle('active');
+           this.classList.toggle('active');
+       }) */
+      
+       let allMenu  = document.querySelector('.all-menu');
+       allMenu.addEventListener('click', (e) => {
+           e.target.classList.toggle('active');
+       })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   
+    <style>
+        .banner { margin: 10px auto; width: 600px; }
+        .banner .big-img { width: 600px; margin-bottom: 20px; height: 460px; }
+        .banner .big-img img  { }
+        .banner .big-img p { font-size: 18px; padding: 15px;}
+        .banner .list { display: flex; flex-wrap: wrap; }
+        .banner .list li {margin-right: 15px; margin-bottom: 15px; padding: 3px; background: #dcdcdc; cursor: pointer;}
+        .banner .list li:nth-child(5) { margin-right: 0; }
+        .banner .list li.on { background: pink;}
+        .banner .list li img  { width: 100px; vertical-align: top;}
+        .banner > p { margin-top: 20px;}
+        .banner button {  border-radius: 50%; border:1px solid #000; background:#fff; width: 80px; height: 80px; margin-right: 15px; cursor: pointer; text-align: center;}
+        .banner button i { font-size: 25px; line-height: 80px; }
+    </style>   
+</head>
+<body>
+    <div class="banner">
+        <div class="big-img"><img src="images/cat0.jpg" alt="">
+            <p>설명설명 </p>
+        </div>
+        <ul class="list">
+            <li class="on" data-id="0" data-title="고양이0 설명" data-url="http://www.naver.com"><img src="images/cat0.jpg" alt="" > </li>
+            <li data-id="1"  data-title="고양이1 설명" data-url="http://www.nate.com"><img src="images/cat1.jpg" alt="" > </li>
+            <li data-id="2"  data-title="고양이2 설명" data-url="http://www.daum.net"><img src="images/cat2.jpg" alt="" > </li>
+            <li data-id="3"  data-title="고양이3 설명" data-url="http://www.google.com"><img src="images/cat3.jpg" alt="" > </li>
+            <li data-id="4"  data-title="고양이4 설명" data-url="http://www.naver.com"><img src="images/cat4.jpg" alt="" > </li>
+            <li data-id="5"  data-title="고양이5 설명" data-url="http://www.naver.com"><img src="images/cat5.jpg" alt="" > </li>
+            <li data-id="6"  data-title="고양이6 설명" data-url="http://www.naver.com"><img src="images/cat6.jpg" alt="" > </li>
+        </ul>
+        <p>
+            <button class="prev"><i class="xi-angle-left"></i></button>
+            <button class="next"><i class="xi-angle-right"></i></button>
+        </p>
+    </div>
+
+    <script>    
+   
+    </script>
+</body>
+</html>
