@@ -33,16 +33,66 @@
           <span>나도연습</span>
       </article>
 
-      <button>Move</button>
-      <button>remove</button>
-      <button>replace</button>
+      <button onclick="move()">Move</button>
+      <button onclick="remove()">remove</button>
+      <button onclick="replace()">replace</button>
 
     <script>
-        
+        const h2 = document.querySelector('h2');
+        const h3 = document.querySelector('h3');
+        const p = document.querySelector('p');
+        const img = document.querySelector('img');
+        const div = document.querySelector('div');
+
+        // div.appendChild(h2);
+        // div.appendChild(img);
+        // div.append(p);
+
+        // div.append(h2);
+        // div.append(img); 
+        // div.append(p);
+        div.append(h2, h3, img, p, '연습');
+
+        function move() {
+          const prev = document.querySelector('#prev');
+          const next = document.querySelector('#next');
+
+          prev.insertBefore(next.firstChild, prev.firstChild);
+        }
+        function remove() {
+          const next = document.querySelector('#next');
+          const box = document.querySelector('.box');
+          const span = document.querySelector('.box span');
+
+          // 부모에게서 자식 객체 삭제
+          box.removeChild(span);
+          // 요소를 삭제
+          next.remove();
+        }
+        function replace() {
+          const box = document.querySelector('.box');
+          const span = document.querySelector('.box span');
+          const p = document.querySelector('p');
+
+          box.replaceChild(p, span);
+          
+        }
+
+
     </script>
 
     <pre>
-        
+        appendChild / append
+        부모 요소 맨 뒤에 요소거 존재하면 이동 / 생성하면 추가
+        appendChild(요소)
+
+        append(요소)
+        append(텍스트)
+        append(요소, 요소, 요소, 텍스트)
+
+        prepend() - 맨 앞에 이동 / 생성 추가
+
+        insertBefore(추가할 요소, 앞으로 이동할 자식 요소)
 
     </pre>
 </body>
