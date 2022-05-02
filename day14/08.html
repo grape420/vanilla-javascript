@@ -29,16 +29,18 @@
 
     <script>
         const prev = document.querySelector('.prev');
-        const next = document.querySelector('next');
+        const next = document.querySelector('.next');
+        const ul = document.querySelector('.banner ul');
+        let first, last;
 
         prev.addEventListener('click', e => {
-            const li = document.querySelectorAll('li');
-            li[3]
-
+            first = document.querySelector('.banner ul li:first-child');
+            ul.append(first);
         })
 
         next.addEventListener('click', e => {
-
+            last = document.querySelector('.banner ul li:last-child');
+            ul.append(last);
         })
 
     </script>

@@ -24,7 +24,14 @@
     </div>
 
     <script>
-         
+         const btn = document.querySelector('button');
+         const ul = document.querySelector('ul');
+
+         btn.addEventListener('click', e => {
+             let el = document.createElement('li');
+             el.innerText = 'MainMenu';
+             ul.append(el);
+         })
     </script> 
  
 

@@ -26,7 +26,28 @@
     </div>
 
     <script>
-        
+        const dom = document.querySelector('div');
+        const h2 = document.createElement('h2');
+
+        dom.append(h2);
+        // h2.innerHTML = '제목2입니다.';
+        // h2.innerText = '제목3입니다.';
+        // h2.textContent = '제목4입니다.';
+
+        const txt = document.createTextNode('제목 5입니다.');
+        h2.append(txt);
+
+        const h3 = document.createElement('h3');
+        const p = document.createElement('p');
+
+        h3.innerHTML = '제목6입니다.';
+        p.innerHTML = '문단 연습입니다.';
+
+        const img = document.createElement('img');
+        img.setAttribute('src', 'images/cat0.jpg');
+        img.setAttribute('width', '300px');
+
+        dom.append(h3, p, img)
     </script>
 </body>
 </html>
