@@ -28,7 +28,28 @@
         <button type="button" id="btn2">Two의 하위 ul의 자식들</button>
 
         <script>
-           
+           document.querySelector('#btn1').addEventListener('click', e => {
+               // 지정된 요소의 텍스트와 하위 요소 모두 조회
+               // 심지어는 코드 줄맞춤을 위해 줄바꿈도 텍스트로 인식 (비추)
+               console.log(document.querySelector('#list').childNodes);
+
+               // 불필요한 텍스트 노드를 제거하고 하위요소만 조회
+               console.log(document.querySelector('#list').children);
+           })
+
+           document.querySelector('#btn2').addEventListener('click', e => {
+                console.log(document.querySelector('#two > ul').childNodes);
+                console.log(document.querySelector('#two > ul').children);
+
+                // 하위 li 태그들을 객체로 호출
+                const children = document.querySelector('#two > ul').children;
+                for (let i = 0; i < children.length; i++) {
+                    console.log(children[i]);
+                    children[i].style.color = 'red';
+                    children[i].style.fontWeight = 'bold';
+                    children[i].style.backgroundColor = 'yellow';
+                }
+            })
         </script>
     </body>
 </html>

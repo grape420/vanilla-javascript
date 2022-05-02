@@ -20,7 +20,18 @@
     </div>
 
     <script>
-       
+       const btn1 = document.querySelector('#btn1');
+       const btn2 = document.querySelector('#btn2');
+
+       btn1.addEventListener('click', e => {
+            const current = e.currentTarget;
+            current.parentElement.previousElementSibling.style.fontSize = '40px';
+       })
+
+       btn2.addEventListener('click', e => {
+            const current = e.currentTarget;
+           current.parentElement.nextElementSibling.style.fontSize = '40px';
+        })
     </script>
 
 </body>

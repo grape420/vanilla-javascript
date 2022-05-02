@@ -11,8 +11,32 @@
 <body>
     <a href="http://www.naver.com" title="네이버로 이동합니다.">네이버</a>
 
+    <!-- <script>
+        const link = document.querySelector('a');
+        link.addEventListener('click', e => {
+            e.preventDefault();
+
+            const aa = link.getAttribute('title');
+            alert(aa);
+        })
+    </script> -->
+
     <script>
-        
+        const link = document.querySelector('a');
+        link.addEventListener('click', e => {
+            e.preventDefault();
+
+            const aa = link.getAttribute('title');
+            
+            // 코드 맨 끝에 return true / return false
+            return false;
+
+            // 아래 부분은 실행 안됨
+            alert(aa);
+
+            
+            
+        })
     </script>
 </body>
 </html>

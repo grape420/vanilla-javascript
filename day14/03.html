@@ -29,7 +29,21 @@
         </li>
     </ul>
  <script>
-      
+      const findParent = document.querySelectorAll('.find-parent');
+      const findParents = document.querySelectorAll('.find-parents');
+
+      for (let i = 0; i< findParent.length; i++) {
+          findParent[i].addEventListener('click', e => {
+            e.preventDefault();
+
+            const current = e.currentTarget;
+            const color = current.dataset.color;
+
+            const parent = current.parentElement.parentElement;
+            parent.style.backgroundColor = color;
+            
+          })
+      }
 
  </script>   
 </body>

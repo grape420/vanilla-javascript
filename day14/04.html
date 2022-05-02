@@ -26,9 +26,24 @@
     </ul>
     <button id="btn1" type="button">자손요소</button>
     
+    
+
     <script>
 
-        
+        let arrColor = ['red', 'green', 'pink', 'skyblue', 'lime'];
+        let random = 0;
+        let current = thumb[0];
+        current.style.backgroundColor = arrColor[random];
+        const btn1 = document.querySelector('#btn1');
+
+        btn1.addEventListener('click', e => {
+            const post = document.querySelector('#post1');
+            const thumb = document.querySelectorAll('#post1 li');
+            
+            random = Math.floor(Math.random() + arrColor.length);
+            current = current.nextElementSibling;
+            current.style.backgroundColor = arrColor[random];
+        })
     </script>
 </body>
 </html>

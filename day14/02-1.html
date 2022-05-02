@@ -42,51 +42,50 @@
       let li = document.querySelectorAll('.list li');
       let p = document.querySelectorAll('p');
 
-      let a1 = list.firstChild;
-      let a2 = list.lastChild;
-      let a3 = list.parentNode;
-      let a4 = list.childNodes;
-      let a5 = li[1].nextSibling;
-      let a6 = li[1].nextSibling.nextSibling;
-      let a7 = li[3].previousSibling.previousSibling;
-      let a8 = p[0].nodeType;
-      let a9 = p[0].nodeValue;
+      let a1 = list.firstElementChild;
+      let a2 = list.lastElementChild;
+      let a3 = list.parentElement;
+      let a4 = list.children;
+      let a5 = list.children[0];
+      let a6 = li[3].nextElementSibling;
+      let a7 = li[2].previousElementSibling;
 
       li[0].innerHTML = '0 / ' + a1;
       li[1].innerHTML = '1 / ' + a2;
       li[2].innerHTML = '2 / ' + a3;
-      li[3].innerHTML = '3 / ' + a4;
+      li[3].innerHTML = '3 / '  +a4;
       li[4].innerHTML = '4 / ' + a5;
       li[5].innerHTML = '5 / ' + a6;
       li[6].innerHTML = '6 / ' + a7;
-      li[7].innerHTML = '7 / ' + a8;
-      li[8].innerHTML = '8 / ' + a9;
+      li[7].innerHTML = '7 / ';
+      li[8].innerHTML = '8 / ';
       li[9].innerHTML = '9 / ';
       li[10].innerHTML = '10 / ';
 
       console.log(a1);
-      console.log(a2);
+      console.log(a2);  
       console.log(a3);
-      console.log(a4);  
+      console.log(a4);
       console.log(a5);
       console.log(a6);
-      a6.style.backgroundColor = 'yellow';
-      a7.style.backgroundColor = 'green';
-      console.log(a8);  
-      console.log(a9);  
+      console.log(a7);
+      a7.style.backgroundColor = 'pink';
+
+             
 
       
  </script>   
 
  <pre>
-    childNodes : 자식노드들 ( 유사배열 ) 
-    firstChild : 기준 노드 자식의 첫 번째
-    lastChild : 기준 노드 자식의 마지막
-    nextSibling : 형제 노드 다음
-    previousSibling : 형제 노드 이전
-    parentNode : 부모노드
-    nodeType : 노드 유형 ( 요소1, 텍스트 : 3, document : 9)
-    nodeValue : 값
+
+    요소 
+    children
+    parentElement
+    firstElementChild
+    lastElementChild
+    nextElementSibling
+    previousElementSibling
+    closest
  </pre>
 </body>
 </html>
