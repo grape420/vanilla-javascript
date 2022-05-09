@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box { 
+        width : 500px; height : 20px; font-size :16px; padding : 10px; border : 1px solid #000;
+        margin :10px; font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <script>
+    let box = document.querySelectorAll('.box');
+    const user = {
+      name : '김다미', 
+      age : 20,
+      gender : 'male',
+      job : '웹 퍼블리셔'
+    }
+    const arr = [
+      ['name', '김다미'], 
+      ['age', 20],
+      ['gender', 'male'],
+      ['job', '웹 퍼블리셔']
+    ]
+
+
+    box[0].innerHTML = Object.keys(user);
+    box[1].innerHTML = Object.values(user);
+    box[2].innerHTML = Object.entries(user);
+    box[3].innerHTML = Object.fromEntries(user);
+    box[4].innerHTML = ''
+    box[5].innerHTML = ''
+    box[6].innerHTML = ''
+    box[7].innerHTML = ''
+    box[8].innerHTML = ''
+    box[9].innerHTML = ''
+
+  </script>
+  <pre>
+    Object.keys() : 속성(키)
+    Object.values() : 값
+    Object.entries() : 키 / 값 배열 처리
+    Object.fromEntries() : 키 / 값의 배열을 객체로
+
+  </pre>
+</body>
+</html>

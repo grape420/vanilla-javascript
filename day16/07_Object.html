@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box { 
+        width : 500px; height : 20px; font-size :16px; padding : 10px; border : 1px solid #000;
+        margin :10px; font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <script>
+    let box = document.querySelectorAll('.box');
+    let result = '';
+    const obj = {
+      a : 10,
+      b : 20,
+      c : 30,
+      d : 40,
+      e : 50
+    }
+
+    box[0].innerHTML = Object.keys(obj);
+
+    // 각각의 값에 100을 더하시오
+    box[1].innerHTML = Object.values(obj).map( item => item + 100);
+    // 30이상만 출력
+    box[2].innerHTML = Object.values(obj).filter( item => item > 30);
+    // 30을 제외한 한 값만 출력
+    box[3].innerHTML = Object.values(obj).filter( item => item != 30);
+    // 각각의 값에 50씩 더하고 누적 값 더하기
+    box[4].innerHTML = Object.values(obj).map( item => item + 50).reduce((a,b) => a + b);
+
+    box[5].innerHTML = Object.entries(obj);
+    // Object.entries() 이용해서 값을 3으로 나누어 떨어지는 것만 출력
+    box[6].innerHTML = Object.entries(obj).filter(item => item[1] % 3 == 0);
+    box[7].innerHTML = ''
+    box[8].innerHTML = ''
+    box[9].innerHTML = ''
+    box[10].innerHTML = ''
+  </script>
+  <pre>
+
+  </pre>
+</body>
+</html>

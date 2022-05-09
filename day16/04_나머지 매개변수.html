@@ -30,6 +30,27 @@
 
     make1('송혜교', '전소미');
     make1('홍길동', '안지영', '김다미');
+
+    function add(name, ...nums) {
+      console.log(name, nums);
+      let sum = 0;
+      nums.forEach(item => sum += item)
+      console.log(sum)
+    }
+    
+    add('김태리', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    add('김다미', 7, 8, 9, 10);
+
+    
+    function add1(name, ...nums) {
+      console.log(name, nums);
+      let sum = 0;
+      sum = nums.reduce( (prev, curr) => prev + curr);
+      console.log(sum) 
+    }
+    
+    add1('김태리', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    add1('김다미', 7, 8, 9, 10);
   </script>
   <pre>
     arguments

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+    </style>
+</head>
+<body>
+  <script>
+    function test(x, y, ...test) {
+      console.log(test);
+    }
+    test(1, 2, 3, 4, 5, 6);
+
+    let arrNum = [1, 2, 3, 4, 5, 6];
+    let [x, y, ...arrRest] = arrNum;
+    console.log(x, y, arrRest);
+
+    function sum(...nums) {
+      let sum = 0;
+      nums.forEach(function(item) {
+        sum += item;
+      })
+      return sum;
+    }
+    let arrNum1 = [1, 2, 3, 4, 5, 6];
+    console.log(sum(...arrNum1));
+
+    let arrNum2 = [1, 2, 3, 4, 5, 6];
+    console.log(Math.min(...arrNum2))
+  </script>
+  <pre>
+  </pre>
+</body>
+</html>
