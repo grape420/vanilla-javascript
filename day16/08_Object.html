@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box { 
+        width : 500px; height : 20px; font-size :16px; padding : 10px; border : 1px solid #000;
+        margin :10px; font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <script>
+    let box = document.querySelectorAll('.box');
+
+    const arr = [10, 20, 30, 40, 50, 60];
+    arr[0] = 100;
+    console.log(arr[0]);
+    
+    Object.freeze(arr);
+    arr[0] = 200;
+    console.log(arr[0]);
+
+    const obj1 = {};
+    obj1.title = '김태리 신상 명세서';
+    console.log(obj1);
+
+    Object.freeze(obj1);
+    obj1.title = '김다미 신상 명세서';
+    console.log(obj1);
+
+
+    let cnt = 0;
+    const make = (obj, num) => {
+      while(true) {
+        console.log(obj);
+
+        if (obj.age > num ) {
+          obj = Object.freeze(obj);
+        }
+        obj.age += 1;
+
+        cnt++;
+        if (cnt > 35) {
+          break;
+        }
+      }
+    }
+
+    let obj2 = {name : '최우식', age : 25};
+    make(obj2, 30);
+  </script>
+  <pre>
+    Object.freeze() : 동결 / 객체 수정 불가
+  </pre>
+</body>
+</html>

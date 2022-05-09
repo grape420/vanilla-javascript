@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box { 
+        width : 500px; height : 20px; font-size :16px; padding : 10px; border : 1px solid #000;
+        margin :10px; font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <script>
+    let box = document.querySelectorAll('.box');
+
+    const food = {
+      name : '빵',
+      state : '좋음',
+      brand : '삼립',
+    }
+
+    food.test = '값';
+    console.log(food);
+
+    delete food.test;
+    console.log(food);
+    
+    food.name = '식빵';
+    console.log(food);
+
+    // 봉인
+    Object.freeze(food);
+
+    food.name = '봉인 안됨';
+    console.log(food.name);
+  </script>
+  <pre>
+    Object.seal() : 봉인
+    다른 개발자가 개체를 변경하는 것을 막는다
+    추가, 삭제 못함
+  </pre>
+</body>
+</html>

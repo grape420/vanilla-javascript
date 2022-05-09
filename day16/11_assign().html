@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      body {margin : 20px;}
+    </style>
+</head>
+<body>
+  <div class="box1">xxx</div>
+  <div class="box2">xxx</div>
+  <div class="box3">xxx</div>
+  <div class="box4">xxx</div>
+  <script>
+    const dom1 = document.querySelector('.box1');
+    const dom2 = document.querySelector('.box2');
+    const dom3 = document.querySelector('.box3');
+    const dom4 = document.querySelector('.box4');
+
+    // dom1.style.backgroundColor = 'pink'
+    // dom1.style.fontSize = '20px'
+    // dom1.style.textIndent = '20px';
+    // dom1.style.padding = '20px';
+    const css = {
+      backgroundColor : 'skyBlue',
+      fontSize : '20px',
+      textIndent : '20px',
+      padding : '20px',
+      width : '300px',
+      height : '60px',
+      lineHeight : '60px'
+    }
+
+    const css1 = {
+      id : 'box',
+      style : `
+        background-color : hotpink;
+        color:#fff;
+        font-size : 20px;
+        text-align : center;
+        width : 400px;
+        height : 100px;
+        line-height : 100px;
+        margin-top : 20px
+      `
+    }
+    
+    Object.assign(dom1.style, css);
+    Object.assign(dom2, css1);
+
+  </script>
+  <pre>
+
+  </pre>
+</body>
+</html>

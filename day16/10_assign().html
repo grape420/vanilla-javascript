@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box { 
+        width : 500px; height : 20px; font-size :16px; padding : 10px; border : 1px solid #000;
+        margin :10px; font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <script>
+    let box = document.querySelectorAll('.box');
+
+    const user = {
+      name : '김다미',
+      age : 20
+    }
+    const aUser = user;     // 객체의 참조값(메모리주소) 복사
+    console.log(user);
+    console.log(aUser);
+
+    aUser.name = '김태리';
+    console.log(user);
+    console.log(aUser);
+
+    const bUser = Object.assign({}, user);    // 빈 객체의 복사가 됨.
+    bUser.name = '안지영';
+
+    console.log(user);
+    console.log(bUser);
+
+    Object.assign(user, {addr : '서울'});
+    console.log(user);
+
+    const obj = {name : '김태리'};
+    const obj1 = {job : '웹 디자이너'};
+    const obj2 = { addr : '서울'};
+
+    Object.assign(obj, obj1, obj2);     // obj의 obj1과 obj2의 값들이 복사 됨
+    console.log(obj)
+    console.log(obj1)
+    console.log(obj2)
+
+  </script>
+  <pre>
+    Object.assign() : 객체 복제
+    대상을 지정한 객체로 다른 객체의 속성을 복사한다.
+    Object.assign(target, ...값)
+
+  </pre>
+</body>
+</html>
