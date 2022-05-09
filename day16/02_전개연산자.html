@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box { 
+        width : 500px; height : 20px; font-size :16px; padding : 10px; border : 1px solid #000;
+        margin :10px; font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <div class="box">?</div>
+  <script>
+    let box = document.querySelectorAll('.box');
+    let result = '';
+
+    const names = ['김다미', '김태리', '최우식', '송혜교', '유재석', '강호동'];
+    const foods = ['과자', '갈비', '고기', '우동'];
+
+    box[0].innerHTML = names.concat();    // 복사
+    box[1].innerHTML = [...foods];        // 배열 안에 값들만 복사
+    box[2].innerHTML = names.concat('강다니엘').concat(foods);     // 원본 훼손없이 복사한 후 추가
+    box[3].innerHTML = [...names, '박진주', '전지현', ...foods]; 
+
+    // 객체 변경
+    const dog = {name : '치와와', age : 3};
+    const dog1 = { ...dog };
+    const dog2 = { ...dog, name : '푸들', age : 5}      // dog 객체를 복사한 후 값 변경
+
+    box[4].innerHTML = Object.entries(dog);        // entries : 객체의 key와 value를 출력
+    box[5].innerHTML = Object.entries(dog1);
+    box[6].innerHTML = Object.entries(dog2);
+
+    const data = [
+      {id : 1, name : '김철수'},
+      {id : 2, name : '김다미'},
+      {id : 3, name : '안지영'}
+    ]
+
+    const data1 = data.concat();
+    const data2 = [...data];
+    const data3 = data.concat({id : 4, name : '김태리'});
+    const data4 = [...data, { id : 5, name : '강호동'}];
+
+    box[7].innerHTML = data1.map(item => {
+      return `${item.id} / ${item.name} `
+    })
+    box[8].innerHTML = data2.map(item => {
+      return `${item.id} / ${item.name} `
+    })
+    box[9].innerHTML =  data3.map(item => {
+      return `${item.id} / ${item.name} `
+    })
+
+    // 결과가 1개일 때
+    box[10].innerHTML =  data4.map( item => `${item.id} / ${item.name}` );
+  </script>
+  <pre>
+    전개연산자, 스프레드 연산자, 펼치기 연산자
+    ...전개연산자
+    객체 안에 키 또는 배열 안에 값 등을 복사하는 개념
+  </pre>
+</body>
+</html>
