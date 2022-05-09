@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">  
+
+    <style>
+        .bg { width: 100%; height: 100%; position: fixed;
+         left: 0; top: 0; background: #000; opacity: 0.5;
+         display: none;
+         }
+         .bg.on{ display: block; }
+         .popup {
+             width: 400px; height: 500px; background:tomato;
+             position: absolute; left: 50%; top: 50%;
+             transform: translate(-50%, -50%);
+             display: none;
+         }
+         .popup.on {display: block; }
+         .popup a {
+             display: block; float: right; width: 50px; height: 50px; background: #000; font-size: 40px; text-align: center; line-height: 50px; color:#fff; 
+         }
+    </style>
+  
+</head>
+<body>
+    <button>팝업</button>
+    <div class="bg"></div>
+    <div class="popup">
+        <a href="#">X</a>
+    </div>
+
+    <script>
+       let btn = document.querySelector('button');
+       let bg = document.querySelector('.bg');
+       let popup = document.querySelector('.popup');
+       let close = document.querySelector('.popup a');
+
+       btn.addEventListener('click', function(e){
+            bg.classList.add('on');
+            popup.classList.add('on');
+       })
+
+       bg.addEventListener('click', (e) => {
+           bg.classList.remove('on');
+           popup.classList.remove('on');
+       })
+
+       close.addEventListener('click', e => {
+           bg.classList.remove('on');
+           popup.classList.remove('on');
+       })
+    </script>
+</body>
+</html>

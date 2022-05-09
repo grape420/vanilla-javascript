@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">  
+
+    <style>
+       .tab { width: 500px; border: 1px solid #000; position: relative; height: 400px;}
+       .tab dt {
+           width: 100px; height: 40px; margin-right: 5px;
+           background: #999;
+           color:#fff;
+           text-align: center;
+           line-height: 40px;
+           float: left;
+           cursor: pointer;
+       }
+       .tab dt.on { background: pink;}
+       .tab dd {
+           position: absolute;
+           left: 0;
+           top: 50px;
+           width: 100%;
+           height: 300px;
+           display: none;
+       }  
+       .tab dd.on { display: block;}     
+       .tab dd:nth-of-type(1) {background: pink; display: block; }
+       .tab dd:nth-of-type(2) {background: skyblue;}
+       .tab dd:nth-of-type(3) {background: lime;}
+       .tab dd:nth-of-type(4) {background: tomato;}
+    </style>
+  
+</head>
+<body>
+    
+    <dl class="tab">
+        <dt class="on" data-id="tab1" >제목1</dt>
+        <dd id="tab1">내용1</dd>
+
+        <dt data-id="tab2" >제목2</dt>
+        <dd id="tab2">내용2</dd>
+
+        <dt data-id="tab3">제목3</dt>
+        <dd id="tab3">내용3</dd>
+
+        <dt data-id="tab4">제목4</dt>
+        <dd id="tab4">내용4</dd>
+    </dl>
+
+    <script>
+      let dt  = document.querySelectorAll('.tab dt');
+      let dd  = document.querySelectorAll('.tab dd');
+      let id = null ;
+
+      dt.forEach( dtItem => {
+          dtItem.addEventListener('click', e => {
+             id = e.currentTarget.dataset.id ;
+             const el = document.getElementById( id );
+            
+            dt.forEach( item => {
+                item.classList.remove('on');
+            })
+
+            // e.currentTarget.classList.add('on');
+            dtItem.classList.add('on');
+
+            dd.forEach( ddItem => {
+                ddItem.classList.remove('on');
+            })
+            el.classList.add('on');
+          })
+      })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        header { display: flex; padding: 0 16px;} 
+        header h1 {   margin: 0;  font-size: 22px;  line-height: 64px; }
+        .sp-menu {   margin-left: auto; }
+        #open {   font-size: 32px;  line-height: 64px;    cursor: pointer;
+        }
+        #open.hide {  display: none; }
+        main {   padding: 0 16px;}
+        .overlay {  position: fixed; top: 0;  bottom: 0;  right: 0; left: 0; background: rgba(255, 255, 255, 0.95); text-align: center; padding: 64px; opacity: 0; pointer-events: none; transition: opacity .6s;} 
+        .overlay.show { opacity: 1;   pointer-events: all; }
+        #close {    position: absolute; top: 16px;  right: 16px;  font-size: 32px;  cursor: pointer; }
+        .overlay ul{  list-style-type: none;   margin: 0;  padding: 0; }
+        .overlay li{  margin-top: 24px; opacity: 0;  transform: translateY(16px); transition: opacity .3s, transform .3s;
+        }
+        .overlay li a{ color: hotpink }
+        .overlay.show li {  opacity: 1; transform: none; }
+        .overlay.show li:nth-child(1) {  transition-delay: .1s; }
+        .overlay.show li:nth-child(2) {  transition-delay: .2s; }
+        .overlay.show li:nth-child(3) {  transition-delay: .3s; }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+
+        <div class="sp-menu">
+            <span class="material-icons" id="open">menu</span>
+        </div>
+    </header>
+
+    <div class="overlay">
+        <span class="material-icons" id="close">close</span>
+        <nav>
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Menu</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos voluptate suscipit molestias, similique quis officiis repellendus aliquid ipsa assumenda placeat aspernatur odio, beatae in deserunt, tenetur fuga cumque sequi accusantium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos voluptate suscipit molestias, similique quis officiis repellendus aliquid ipsa assumenda placeat aspernatur odio, beatae in deserunt, tenetur fuga cumque sequi accusantium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos voluptate suscipit molestias, similique quis officiis repellendus aliquid ipsa assumenda placeat aspernatur odio, beatae in deserunt, tenetur fuga cumque sequi accusantium.</p>       
+    </main>
+    <script>
+        const open  = document.querySelector('#open');
+        const overlay  = document.querySelector('.overlay');
+        const close  = document.querySelector('#close');
+
+        open.addEventListener('click', function(e) {
+            overlay.classList.add('show');
+            open.classList.add('hide');
+        })
+        
+        close.addEventListener('click', function(e) {
+            overlay.classList.remove('show');
+            open.classList.remove('hide');
+        })        
+    </script>
+</body>
+</html>

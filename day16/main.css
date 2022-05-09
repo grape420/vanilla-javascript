@@ -1,0 +1,37 @@
+.wrap { width: 400px; margin:20px auto;}
+.title {
+    text-align: center;
+    font-size: 40px;margin-bottom: 20px;
+  }
+  
+  #stopWatchPanel {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* 카운트박스 */
+  .display {
+    font-weight: bold;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: 1px solid #000;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  .actions button { padding:15px 30px }
+  
+/* 생성해서 출력하는 div에 클래스붙이기 */
+  .message {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid lightblue;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }

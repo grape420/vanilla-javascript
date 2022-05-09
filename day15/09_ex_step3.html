@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">  
+
+    <style>
+       .con-box {width: 1400px; margin: auto; display: flex;}
+       .con-box ul{display: flex; width: 600px; flex-wrap: wrap;}
+       .con-box ul li {padding: 5px;}
+       .con-box ul li.on {background: tomato;}
+       .con-box ul li img { vertical-align: top; width: 140px; height:140px;}
+       .con-box .txt-box {width: 400px; height: 450px; position: relative; box-sizing: border-box; padding:0 20px; }
+       .con-box .txt-box article { width: 89%; height: 430px; position: absolute; background: beige; box-sizing: border-box; padding: 20px; display: none;}
+       .con-box .txt-box article:first-child {display: block;}
+       .con-box .txt-box article h3 { font-size: 25px; margin-bottom: 20px;} 
+       .con-box .big-img {width: 400px;}
+       .con-box .big-img img{width: 400px;}
+    </style>
+   
+</head>
+<body>
+   <div class="con-box">
+       <ul>
+           <li class="on" data-id="0" ><img src="images/thum0.jpg" alt="" ></li>
+           <li data-id="1"><img src="images/thum1.jpg" alt="" ></li>
+           <li data-id="2"><img src="images/thum2.jpg" alt="" ></li>
+           <li data-id="3"> <img src="images/thum3.jpg" alt="" ></li>
+           <li data-id="4"><img src="images/thum4.jpg" alt="" ></li>
+           <li data-id="5"><img src="images/thum5.jpg" alt="" ></li>
+           <li data-id="6"><img src="images/thum6.jpg" alt="" ></li>
+           <li data-id="7"><img src="images/thum7.jpg" alt="" ></li>
+           <li data-id="8"><img src="images/thum8.jpg" alt="" ></li>
+           <li data-id="9"><img src="images/thum9.jpg" alt="" ></li>
+       </ul>
+       <div class="txt-box">
+           <article>
+            <h3>타이틀1</h3>
+            <p>제품에 대한설명1</p>
+           </article>
+           <article>
+            <h3>타이틀2</h3>
+            <p>제품에 대한설명2</p>
+           </article>
+           <article>
+            <h3>타이틀3</h3>
+            <p>제품에 대한설명3</p>
+           </article>
+           <article>
+            <h3>타이틀4</h3>
+            <p>제품에 대한설명4</p>
+           </article>
+           <article>
+            <h3>타이틀5</h3>
+            <p>제품에 대한설명5</p>
+           </article>
+           <article>
+            <h3>타이틀6</h3>
+            <p>제품에 대한설명6</p>
+           </article>
+           <article>
+            <h3>타이틀7</h3>
+            <p>제품에 대한설명7</p>
+           </article>
+           <article>
+            <h3>타이틀8</h3>
+            <p>제품에 대한설명8</p>
+           </article>
+           <article>
+            <h3>타이틀9</h3>
+            <p>제품에 대한설명9</p>
+           </article>
+           <article>
+            <h3>타이틀10</h3>
+            <p>제품에 대한설명10</p>
+           </article>
+       </div>
+       <div class="big-img">
+           <img src="images/bigimg0.jpg" alt="" >
+       </div>
+   </div>
+
+   <script>
+       let thum = document.querySelectorAll('.con-box ul li');
+       let article = document.querySelectorAll('.con-box .txt-box article');
+       let bigimg = document.querySelector('.con-box .big-img img');
+
+       let id = 0 , imgurl ='', timer=null , interval = 3000, size  = thum.length ; 
+
+       timer  = setInterval( make , interval );
+       function make(){
+            //증가감소
+            id++;
+            //조건 
+            if( id > size - 1 ) {
+                id = 0;
+            }
+            //결과 
+            banner();
+       } 
+
+       thum.forEach( thumItem => {
+            thumItem.addEventListener('click' , e => {
+                id = e.currentTarget.dataset.id;
+                
+                banner();
+                clearInterval( timer );
+                timer  = setInterval( make , interval );
+        })//end thumItem
+       })//end forEach
+
+       //마우스 올리기
+       bigimg.addEventListener('mouseenter' , e  => {
+        clearInterval( timer );
+       })
+
+       //마우스 내리기 
+       bigimg.addEventListener('mouseleave' , e  => {
+        timer  = setInterval( make , interval );
+       })
+
+       function banner(){
+            imgurl = 'images/bigimg'+id+'.jpg';
+            bigimg.setAttribute('src', imgurl);
+        
+            article.forEach( articleItem => {
+                articleItem.style.display = 'none';
+            })
+            article[id].style.display = 'block';
+
+            thum.forEach( item => {
+                item.classList.remove('on');
+            })
+            thum[id].classList.add('on');
+   }
+
+   </script>
+    
+</body>
+</html>
