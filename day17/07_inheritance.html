@@ -21,37 +21,21 @@
     }
 
     class Dog extends Animal {
-      /* 생략 가능
-      constructor(...args) {
-        // 부모 생성자
-        super(...args);
-      }
-      */
       sleep() {
         console.log('나는 잔다')
       }
-    }
-
-    class Cat extends Animal {
-      swim() {
-        console.log('나는 수영한다')
+      run() {
+        console.log('내일도 달린다')
       }
     }
 
-    const dog = new Dog('pink');
-    const cat = new Cat('green');
-
-    console.log(dog.color, dog.age)
-    console.log(cat.color, cat.age)
+    const dog = new Dog();
 
     dog.run()
-    cat.run()
 
-    dog.eat()
-    cat.eat()
 
-    dog.sleep()
-    cat.swim()
+  
+
   </script>
 </head>
 <body>
