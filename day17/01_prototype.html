@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // 공통부분
+    const animal = {
+      color : 'green',
+      age : 5, 
+      run() {
+        console.log('달리기');
+      }
+    }
+
+    const dog = {
+      color : 'yellow'
+    }
+
+    const cat = {
+      color : 'orange'
+    }
+
+    // __proto__ : 상속
+    dog.__proto__ = animal;
+    cat.__proto__ = animal;
+
+    for (let item in dog) {
+      console.log(item)
+    }
+    console.log(dog.age, dog.color)
+
+    const {color, age} = dog
+    console.log(age, color);
+
+    const aa = {
+      name : '강아지'
+    }
+    console.log('\n')
+    aa.__proto__ = animal;
+
+    for (let i in aa) {
+      console.log(i)
+    }
+
+    const a = Object.keys(aa)
+    const b = Object.values(aa)
+    console.log(a);
+    console.log(b);
+  </script>
+</head>
+<body>
+  <pre>
+    javaScript는 흔히 프로토타입 기반 언어라고 불린다.
+    프로토타입(원형) 기반으로 새로운 객체를 생성해가는 프로그래밍 방식
+    생성된 객체는 자신의 프로토타입을 갖는다.
+
+    프로토타입은 객체에 보이지 않는 숨겨진 곳에 값을 넣어놓고 값을 꺼내서 쓸 수 있게 해준다.
+    메소드들...
+    .map, push.. 등등
+
+    Object.getPrototypeOf()
+  </pre>
+</body>
+</html>

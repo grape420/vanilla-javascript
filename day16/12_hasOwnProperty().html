@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      body {margin : 20px;}
+    </style>
+</head>
+<body>
+  <script>
+    const dog = {
+      color : 'pink',
+      age : 2,
+      name : '치와와'
+    }
+    console.log(dog.hasOwnProperty('color'))      // 속성을 가지고 있는지 여부 (true / false)
+    console.log(dog.hasOwnProperty('age')) 
+    console.log(dog.hasOwnProperty('name')) 
+    console.log(dog.hasOwnProperty('addr')) 
+    console.log(dog.hasOwnProperty('tel')) 
+
+    const dog2 = {
+      color : 'pink',
+      age : 2,
+      run() {
+        console.log('오늘도 달린다.');
+      }
+    }
+
+    const cat = {
+      color : 'red',
+      age : 3,
+      run() {
+        console.log('오늘도 달린다.');
+      }
+    }
+
+    const bird = {
+      color : 'blue',
+      age : 6,
+      run() {
+        console.log('오늘도 달린다.');
+      }
+    }
+  </script>
+  <pre>
+
+  </pre>
+</body>
+</html>
