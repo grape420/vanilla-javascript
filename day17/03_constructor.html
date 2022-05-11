@@ -11,10 +11,34 @@
     }
 
     // 공통 - 상속
-    
+    Man.prototype.age = 10
+    Man.prototype.color = 'pink'
+    Man.prototype.run = function() {
+      console.log(this.name, '오늘도 달린다')
+    }
 
     const aa = new Man('최우식')
-    console.log(aa.name)
+    const bb = new Man('김다미')
+    console.log(aa.name, aa.color, aa.age)
+    console.log(bb.name, bb.color, bb.age)
+    aa.run();
+    bb.run()
+
+    function User(name) {
+      this.name = name
+    }
+
+    User.prototype = {
+      addr : 'Seoul',
+      color : 'pink',
+      job : '웹 퍼블리셔',
+      work() {
+        console.log(this.name, '오늘도 일한다')
+      }
+    }
+
+    const user1 = new User('김다미')
+    console.log(user1.addr, user1.color, user1.job);
 
   </script>
 </head>
