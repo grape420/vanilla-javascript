@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    class Dog {
+      constructor(color) {
+        this.color = color;
+        this.age = 4
+      }
+      run() {
+        console.log('오늘도 달린다')
+      }
+      eat() {
+        console.log('오늘도 먹는다')
+      }
+    }
+
+    class Cat {
+      constructor(color) {
+        this.color = color;
+        this.age = 4
+      }
+      run() {
+        console.log('오늘도 달린다')
+      }
+      eat() {
+        console.log('오늘도 먹는다')
+      }
+    }
+
+    const dog = new Dog('pink');
+    const cat = new Cat('green');
+
+    console.log(dog.color, dog.age)
+    console.log(cat.color, cat.age)
+
+    dog.run()
+    cat.run()
+
+    dog.eat()
+    cat.eat()
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>

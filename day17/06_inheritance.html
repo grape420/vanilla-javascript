@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // 공통
+    class Animal {
+      constructor(color) {
+        this.color = color;
+        this.age = 4
+      }
+      run() {
+        console.log('오늘도 달린다')
+      }
+      eat() {
+        console.log('오늘도 먹는다')
+      }
+    }
+
+    class Dog extends Animal {
+      constructor(...args) {
+        // 부모 생성자
+        super(...args);
+      }
+      sleep() {
+        console.log('나는 잔다')
+      }
+    }
+
+    class Cat extends Animal {
+      constructor(...args) {
+        // 부모 생성자
+        super(...args);
+      }
+      swim() {
+        console.log('나는 수영한다')
+      }
+    }
+
+    const dog = new Dog('pink');
+    const cat = new Cat('green');
+
+    console.log(dog.color, dog.age)
+    console.log(cat.color, cat.age)
+
+    dog.run()
+    cat.run()
+
+    dog.eat()
+    cat.eat()
+
+    dog.sleep()
+    cat.swim()
+  </script>
+</head>
+<body>
+  <pre>
+    
+  </pre>
+</body>
+</html>
