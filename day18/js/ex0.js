@@ -58,7 +58,7 @@
   const $view = get('.view');
   const $output = get('.output');
   let count = 0;
-  
+
   // 클래스 생성
   class StopTimer {
     // 초기값을 넣어줄 수 도 있음
@@ -85,7 +85,6 @@
     } // end init
 
     start() {
-      
       if (this.timer == null) {
             $view.innerHTML = count;
             this.timer = setInterval(() => {
@@ -93,12 +92,26 @@
               $view.innerHTML = count;
             },1000);
       }
+      this.make('시작');
     }
     stop() {
       if (this.timer != null) {
         clearInterval(this.timer);
         this.timer = null;
       }
+      this.make('중지');
+    }
+
+    make(msg) {
+        const div = document.createElement('div');
+        const now = new Date();
+        const h = now.getHours();
+        const m = now.getMinutes();
+        const s = now.getSeconds();
+
+        div.innerHTML = `${h}시 ${m}분 ${s}초 ${msg}`;
+        div.classList.add('msg');
+        $output.append(div);
     }
     
   }// end class
