@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">  
     <style>
-      body { margin : 20px;}
-      ul { margin-top : 20px;} 
-      li { 
-        width : 200px; border : 1px solid #000; line-height: 40px; padding :5px; font-size : 18px; margin-bottom : 5px;
-      }
+        body { margin: 20px; }
+        ul { margin-top: 20px; }
+        li {
+            width: 200px; border: 1px solid #000; line-height: 40px; padding: 5px; font-size: 18px; margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -18,36 +18,32 @@
     <button class="btn1">추가</button>
     <button class="btn2">출력</button>
     <ul>
-
+        <!-- <li>xxx</li> -->
     </ul>
     <script>
-      let txt = document.querySelector('.txt');
-      let btn1 = document.querySelector('.btn1');
-      let btn2 = document.querySelector('.btn2');
-      let ul = document.querySelector('ul');
-      let li = '';
-      let data = [];
+        let txt = document.querySelector('.txt');
+        let btn1 = document.querySelector('.btn1');
+        let btn2 = document.querySelector('.btn2');
+        let ul = document.querySelector('ul');
+        let li = '', data = [] ;
 
-      btn1.addEventListener('click', e=> {
-        data.push(txt.value);
+        btn1.addEventListener('click', e  => {
+            data.push( txt.value );
+            txt.value ='' ;
+            txt.focus();
+            console.log(data )
+        })
+        btn2.addEventListener('click', e  => {
+            data.forEach( item => {
+                li = document.createElement('li');
+                li.textContent  = item ;
+                ul.append( li );
 
-        txt.value = '';
-        txt.focus();
-        console.log(data);
-      })
-      btn2.addEventListener('click', e=> {
-        for (let i in data) {
-          li = document.createElement('li')
-          li.innerHTML = data[i];
-          ul.append(li)
-
-          li.addEventListener('click', e=> {
-          e.currentTarget.remove()
-      })
-        }
-      })
-      
-
+                li.addEventListener('click', e => {
+                    e.currentTarget.remove();
+                })
+            })
+        })
     </script>    
 </body>
 </html>

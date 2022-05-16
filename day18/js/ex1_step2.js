@@ -1,6 +1,10 @@
 ;(function(){
-    const get = ( target ) => document.querySelector( target );
-    const getAll = ( target ) => document.querySelectorAll( target );
+    const get = ( target ) => {
+        return document.querySelector( target )
+    }
+    const getAll = ( target ) => {
+        return document.querySelectorAll( target )
+    }
 
     const $prev = get('.banner-wrap .btn-wrap .prev');
     const $next = get('.banner-wrap .btn-wrap .next');
@@ -29,19 +33,15 @@
             })   
         }//end init
 
-        banner(){
-            $banner.style.transform = `translateX(${ -this.size * this.current}px)`;
-            $pagingli[this.old].classList.remove('on');
-            $pagingli[this.current].classList.add('on');
-            this.old = this.current;
-        }
-
         nextMove(){
             this.current++;
             if( this.current > this.len  - 1 ) {
                 this.current  = 0;
             }
-            this.banner();
+            $banner.style.transform = `translateX(${ -this.size * this.current}px)`;
+            $pagingli[this.old].classList.remove('on');
+            $pagingli[this.current].classList.add('on');
+            this.old = this.current;
         } //end nextMove
 
         prevMove(){
@@ -49,13 +49,19 @@
             if( this.current < 0  ) {
                 this.current  = this.len  - 1;
             }
-            this.banner();
+            $banner.style.transform = `translateX(${ -this.size * this.current}px)`;
+            $pagingli[this.old].classList.remove('on');
+            $pagingli[this.current].classList.add('on');
+            this.old = this.current;
         }//end prevMove
 
         pagingMove(e){
             let el  = e.currentTarget;
             this.current = el.dataset.num ;
-            this.banner();
+            $pagingli[this.old].classList.remove('on');
+            $pagingli[this.current].classList.add('on');            
+            $banner.style.transform = `translateX(${ -this.size * this.current}px)`;        
+            this.old = this.current;
         }//end pagingMove
     }
 

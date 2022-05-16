@@ -1,66 +1,40 @@
+const prev = document.querySelector('.banner-wrap .btn-wrap .prev');
+const next = document.querySelector('.banner-wrap .btn-wrap .next');
+const banner = document.querySelector('.banner-wrap .banner');
+const bannerli = document.querySelectorAll('.banner-wrap .banner li');
+const pagingli = document.querySelectorAll('.banner-wrap .paging li');
+let current = 0 , old = 0, size = 600 , len = bannerli.length ;
 
-;(function() {
-  const get = target => {
-    return document.querySelector(target);
-  }
-  const getAll = target => {
-    return document.querySelectorAll(target);
-  }
-
-
-  const $prev = get('.banner-wrap .btn-wrap .prev');
-  const $next = get('.banner-wrap .btn-wrap .next');
-  const $banner = get('.banner-wrap .banner');
-  const $bannerLi = getAll('.banner-wrap .banner li');
-  const $pagingLi = getAll('.banner-wrap .paging li');
-
-  class Gallery {
-    constructor() {
-      this.current = 0;
-      this.old = 0;
-      this.size = 600;
-      this.length = $bannerLi.length;
+next.addEventListener('click', (e) => {
+    current++;
+    if( current > len  - 1 ) {
+        current  = 0;
     }
-    init() {
-      $next.addEventListener('click', e => {
-        this.nextMove()
-      })
-      $prev.addEventListener('click', e => {
-        this.prevMove()
-      })
-      $pagingLi.forEach( item => {
-        item.addEventListener('click', e => {
-          this.pagingMove()
-        })
-      })
-    }// end init
-
-    nextMove() {
-      this.current++;
-      if (this.current == this.length - 1) {
-        this.current = 0;
-      }
-      $banner.style.transform = `translateX(${-this.size * this.current}px)`;
-      $pagingLi[this.old].classList.remove('on');
-      $pagingLi[this.current].classList.add('on');
-      this.old = this.current;
+    banner.style.transform = `translateX(${ -size * current}px)`;
+    pagingli[old].classList.remove('on');
+    pagingli[current].classList.add('on');
+    old = current;
+})
+prev.addEventListener('click', (e) => {
+    current--;
+    if( current < 0  ) {
+        current  = len  - 1;
     }
-    prevMove() {
-      this.current--;
-      if (this.current < 0) {
-        this.current = this.length - 1;
-      }
-      $banner.style.transform = `translateX(${-this.size * this.current}px)`;
-      $pagingLi[this.old].classList.remove('on');
-      $pagingLi[this.current].classList.add('on');
-      this.old = this.current;
-    }
-    pagingMove() {
-      
-    }
-  } // end Gallery
+    banner.style.transform = `translateX(${ -size * current}px)`;
+    pagingli[old].classList.remove('on');
+    pagingli[current].classList.add('on');
+    old = current;
+})
 
-  const gallery = new Gallery();
-  gallery.init();
+pagingli.forEach( item => {
+    item.addEventListener('click', (e) => {
+        let el  = e.currentTarget;
+        current = el.dataset.num ;
+        pagingli[old].classList.remove('on');
+        // pagingli[current].classList.add('on');
+        el.classList.add('on');
+        banner.style.transform = `translateX(${ -size * current}px)`;        
+        old = current;
+    })
+})
 
-})()

@@ -22,16 +22,14 @@
             $prev.addEventListener('click', (e) =>{
                 this.prevMove();
             })
-            this.banner();           
+            this.banner();
+            this.startTimer();
         }
 
         startTimer(){
-            if( this.timer ) {
-                clearTimeout( this.timer );
-            }
-            this.timer  = setTimeout( () => {
+            this.timer = setInterval( () => {
                 this.nextMove();
-            }, 3000)
+            }, this.interval )
         }
 
         nextMove(){
@@ -39,7 +37,9 @@
             if( this.current > this.totalImage -1 ) {
                 this.current = 0;
             }
-            this.banner();           
+            this.banner();
+            clearInterval( this.timer );
+            this.startTimer();
         }
 
         prevMove(){
@@ -47,7 +47,9 @@
             if( this.current < 0  ) {
                 this.current = this.totalImage - 1;
             }
-            this.banner();            
+            this.banner();
+            clearInterval( this.timer );
+            this.startTimer();
         }
 
 
@@ -67,8 +69,6 @@
                 {opacity:0},
                 {opacity:1},
             ], 500) 
-
-            this.startTimer();
         } //end banner
     }
 
@@ -82,4 +82,5 @@
 
     const photogallery  = new PhotoGallery( $photoWrap , arrImg );
     photogallery.init();
+
 })()

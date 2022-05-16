@@ -6,34 +6,32 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">  
     <style>
-      body { margin : 20px;}
-      ul { margin-top : 20px;} 
-      li { 
-        width : 200px; border : 1px solid #000; line-height: 40px; padding :5px; font-size : 18px; margin-bottom : 5px;
-      }
+        body { margin: 20px; }
+        ul { margin-top: 20px; }
+        li {
+            width: 200px; border: 1px solid #000; line-height: 40px; padding: 5px; font-size: 18px; margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
     <input type="text" class="txt">
     <button class="btn">추가</button>
     <ul>
-
+        <!-- <li>xxx</li> -->
     </ul>
     <script>
-      let txt = document.querySelector('.txt');
-      let btn = document.querySelector('.btn');
-      let ul = document.querySelector('ul');
-      let li = '';
+        let txt = document.querySelector('.txt');
+        let btn = document.querySelector('.btn');
+        let ul = document.querySelector('ul');
+        let li = '';
 
-      btn.addEventListener('click', e=> {
-        li = document.createElement('li');
-        li.textContent = txt.value;
-        ul.append(li);
-
-        txt.value = '';
-        txt.focus();
-      })
-
+        btn.addEventListener('click', e  => {
+            li = document.createElement('li');
+            li.textContent  = txt.value ;
+            ul.append( li );
+            txt.value  = '';
+            txt.focus();
+        })
     </script>    
 </body>
 </html>
